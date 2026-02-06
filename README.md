@@ -1,93 +1,71 @@
-# Fullstack Template (Vue 3 + Hono)
 
-A production-ready template for building scalable fullstack applications. This project extracts standard patterns and configurations to streamline the initialization of new projects, featuring a modern tech stack and strict architectural guidelines.
+# Puerto Princesa Gym Directory
+
+A centralized directory to help locals and visitors quickly find gyms across Puerto Princesa City, organized by barangay with direct Google Maps integration.
+
+---
+
+## Project Overview
+
+Finding gyms in Puerto Princesa is currently fragmented across social media, word of mouth, and incomplete listings. This project solves that by providing a single, clean directory with accurate location data and easy navigation.
+
+### Target Audience
+- **Local residents** searching for nearby gym options
+- **Visitors and newcomers** exploring fitness facilities in Puerto Princesa
+
+---
+
+## Features
+
+- **Barangay-organized directory** – Browse gyms by location
+- **Google Maps integration** – Direct navigation links for each gym
+- **Clean, responsive UI** – Optimized for mobile and desktop
+- **Future enhancements** – Search, filtering, and advanced gym details
+
+---
 
 ## Tech Stack
 
 ### Frontend
-- **Framework**: [Vue 3](https://vuejs.org/) (Script Setup)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Styling**: [TailwindCSS v4](https://tailwindcss.com/)
-- **State Management**: [Pinia](https://pinia.vuejs.org/)
-- **Server State**: [TanStack Query](https://tanstack.com/query/latest) (Vue Query)
-- **Icons**: [Lucide Vue Next](https://lucide.dev/guide/packages/lucide-vue-next)
-- **HTTP Client**: [Axios](https://axios-http.com/)
-- **Fingerprinting**: [ThumbmarkJS](https://github.com/thumbmarkjs/thumbmarkjs)
+- **Vue.js 3** + **TypeScript** – Type-safe component architecture
+- **TailwindCSS** – Utility-first styling
+- **Pinia** – Global state management
+- **TanStack Vue Query** – Server state caching and synchronization
 
-### Backend
-- **Runtime**: [Node.js](https://nodejs.org/)
-- **Framework**: [Hono](https://hono.dev/)
-- **Database**: [PostgreSQL](https://www.postgresql.org/)
-- **ORM**: [Prisma](https://www.prisma.io/)
-- **Logging**: [Pino](https://github.com/pinojs/pino)
+### External Services
+- **Cloudinary** – Image hosting and optimization
+- **Google Maps Embed API** – Interactive location previews
+- **Google Maps Static API** – Static map snapshots
 
-## Architecture
-
-This project enforces a **Feature-Based Architecture** in both Frontend and Backend to ensure scalability and maintainability.
-
-### Frontend Structure (`Frontend/src/features/`)
-Each feature (e.g., `auth`, `users`) is self-contained with its own:
-- `components/`: Feature-specific UI components
-- `composables/`: Logic and state (TanStack Query hooks)
-- `store/`: Client-side state (Pinia)
-- `api/`: API service calls
-- `routes.ts`: Route definitions
-
-### Backend Structure (`Backend/src/features/`)
-Follows a strict separation of concerns:
-- `route.ts`: HTTP routes (Hono)
-- `controller.ts`: Request/Response handling
-- `service.ts`: Business logic
-- `data.ts`: Database queries (Prisma)
-- `middleware.ts`: Feature-specific middleware
+---
 
 ## Getting Started
 
 ### Prerequisites
-- Docker Desktop
+- **Node.js** 18+ and **npm** (or **pnpm**/yarn)
 
 ### Installation
 
-1.  **Clone the repository**
-    ```bash
-    git clone <repository-url>
-    cd fullstack-template
-    ```
-
-2.  **Setup Backend**
-    ```bash
-    cd Backend
-    npm install
-    cp .env.example .env # Configure your DB_URL
-    docker compose -f compose.dev.yaml up -d
-    npx prisma migrate dev --name init
-    npx prisma generate
-    ```
-
-3.  **Setup Frontend**
-    ```bash
-    cd ../Frontend
-    npm install
-    cp .env.example .env # Configure VITE_API_URL
-    ```
-
-### Running the Project
-
-**Backend Development Server**
 ```bash
-# In Backend directory
-docker compose -f compose.dev.yaml watch
-```
+# Clone the repository
+git clone https://github.com/khentdev/puertoprincesagyms.git
+cd puerto-princesa-gym-directory
 
-**Frontend Development Server**
-```bash
-# In Frontend directory
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-## Key Features
+The app will be available at **http://localhost:5173** (default Vite port).
 
-- **Strict TypeScript**: Configured for maximum type safety.
-- **Automated Tooling**: ESLint, Prettier, and custom workflows.
-- **Secure Auth**: HttpOnly Cookie-based authentication patterns.
-- **Error Handling**: Centralized error handling on both client and server.
+## Contact
+
+For questions or feedback, reach out via:
+- **GitHub Issues:** [Submit an issue](https://github.com/khentdev/puertoprincesagyms/issues)
+- **Email:** khentdevph@gmail.com
+
+---
+
+**Built with ❤️ for the Puerto Princesa fitness community**
