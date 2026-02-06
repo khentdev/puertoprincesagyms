@@ -33,7 +33,7 @@ Finding gyms in Puerto Princesa is currently fragmented across social media, wor
 
 ### External Services
 - **Cloudinary** – Image hosting and optimization
-- **Google Maps Embed API** – Interactive location previews
+- **Google Maps Javascript API** – Interactive location previews
 - **Google Maps Static API** – Static map snapshots
 
 ---
