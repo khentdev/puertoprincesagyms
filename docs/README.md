@@ -108,20 +108,31 @@ Gym data will be stored in static JSON file.
 
 ### User Flow
 
-- User opens the website
-- User sees a list of gyms by default (on All tab from sidebar)
-    - User sees a single map that shows all the gyms with pins
-    - User clicks the pin and sees the information of selected gym via modal
-    - User sees a list of all gyms under the single map
-    - User clicks a gym
-    - User sees a selected gym informations
-- User sees a list of barangay on sidebar
-- User selects a barangay
-- User sees list of gyms from selected barangay
-- User clicks a gym
-- User sees a selected gym informations
-- User clicks Google Maps Link
-- User navigates to gym
+1. User opens the website
+2. User sees "All Gyms" tab selected by default
+    - Main area displays:
+        - A single interactive map showing all gyms with pins (Google Maps JS API)
+        - A list of all gym cards below the map (sorted A-Z)
+3. User can view gym details from "All Gyms" tab:
+    - User clicks a pin on the map → Gym Details Modal opens
+    - User clicks a gym card → Gym Details Modal opens
+4. User can filter by barangay:
+    - User sees list of barangays in sidebar
+    - User selects a barangay tab
+    - Main area displays:
+        - List of gym cards for that barangay only (sorted A-Z)
+        - No interactive map (cleaner, faster view)
+5. User clicks a gym card from barangay tab:
+    - Gym Details Modal opens
+6. In Gym Details Modal, user sees:
+    - Static map image showing gym location (Google Maps Static API)
+    - Gym profile image
+    - Gym name
+    - Barangay
+    - Gym images
+    - “Open in Google Maps” button
+    - Close button
+7. User clicks "Open in Google Maps" button → Navigates to gym location in Google Maps app/website
 
 # Page Structure
 
@@ -153,11 +164,11 @@ Gym data will be stored in static JSON file.
 
 Each card displays:
 
-- Gym image
+- Gym profile image
 - Gym name
 - Barangay
 - Address
-- “Open in Maps” button
+- “See more” button
 
 ### Selected Gym in Barangay
 
@@ -169,11 +180,11 @@ Each card displays:
 
 Each card displays:
 
-- Gym image
+- Gym profile image
 - Gym name
 - Barangay
 - Address
-- “Open in Maps” button
+- “See more” button
 
 ### **Interaction Behavior**
 
@@ -187,10 +198,12 @@ Show detailed information about the selected gym without leaving the list view
 
 ### **Contains**
 
-- Gym image (larger preview)
+- Static map image showing gym location (Google Maps Static API)
+- Gym profile image
 - Gym name
 - Barangay
-- Google maps button
+- Gym images
+- “Open in Google Maps” button
 - Close button
 
 ### Mobile Behaviour
