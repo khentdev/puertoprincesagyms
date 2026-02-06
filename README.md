@@ -30,7 +30,6 @@ Finding gyms in Puerto Princesa is currently fragmented across social media, wor
 - **Vue.js 3** + **TypeScript** – Type-safe component architecture
 - **TailwindCSS** – Utility-first styling
 - **Pinia** – Global state management
-- **TanStack Vue Query** – Server state caching and synchronization
 
 ### External Services
 - **Cloudinary** – Image hosting and optimization

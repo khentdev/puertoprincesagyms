@@ -1,3 +1,5 @@
+# Puerto Princesa Gym Directories
+
 # Goal
 
 ### **Why am I making this project?**
@@ -31,8 +33,10 @@ This project centralizes gym information into one clean, easy-to-use directory o
 ### Future Enhancements (Post MVP)
 
 - Search gyms by name
-- Description (optional)
-- View socials
+- Filter gyms by barangay
+- View contact information and social links
+- View opening hours
+- Detailed gym descriptions
 
 ### Guardrails
 
@@ -85,7 +89,7 @@ interface GymV2 extends Gym {
 - Open gym locations directly in Google Maps
 - View a representative gym image
 
-## Future Enhancements (V2)
+## Future Enhancements (Post MVP)
 
 - Search gyms by name
 - Filter gyms by barangay
@@ -112,7 +116,8 @@ Gym data will be stored in static JSON file.
 2. User sees "All Gyms" tab selected by default
     - Main area displays:
         - A single interactive map showing all gyms with pins (Google Maps JS API)
-        - A list of all gym cards below the map (sorted A-Z)
+        - A sort by with options
+        - A list of all gym cards below the map
 3. User can view gym details from "All Gyms" tab:
     - User clicks a pin on the map → Gym Details Modal opens
     - User clicks a gym card → Gym Details Modal opens
@@ -120,7 +125,8 @@ Gym data will be stored in static JSON file.
     - User sees list of barangays in sidebar
     - User selects a barangay tab
     - Main area displays:
-        - List of gym cards for that barangay only (sorted A-Z)
+        - A sort by with options
+        - List of gym cards for that barangay only
         - No interactive map (cleaner, faster view)
 5. User clicks a gym card from barangay tab:
     - Gym Details Modal opens
@@ -139,7 +145,7 @@ Gym data will be stored in static JSON file.
 ## Header
 
 - Project title: **Puerto Princesa Gym Directory**
-- Optional small tagline: "Find gyms near you"
+- Optional small tagline: "Find your perfect workout spot in the city"
 
 ---
 
@@ -406,21 +412,19 @@ Bottom sheet modal (fullscreen from bottom to top)
 - Styling Method
     - TailwindCSS
 - State Management
-    - Tanstack Query
     - Pinia Store (or local state if small)
 
 ## External Services
 
 - Cloudinary - for image hosting
 - Maps
-    - Google Maps EmbedAPI
+    - Google Maps Javascript API
     - Google Maps Static API
 
 ### Tech Stack Justification
 
 - Vue.js 3 Typescript - For UI build
 - TailwindCSS - For fast styling
-- Tanstack Query - For state management and caching of data (for fast load time)
 - Pinia Store - For global UI State or local data states
 - Cloudinary - For image hosting
 - Maps
