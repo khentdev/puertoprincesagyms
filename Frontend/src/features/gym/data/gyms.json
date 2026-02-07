@@ -1,0 +1,55 @@
+{
+  "gyms": [
+    {
+      "id": "1",
+      "name": "Ironclad Fitness Center",
+      "barangay": "San Miguel",
+      "address": "National Highway, Brgy. San Miguel",
+      "location": {
+        "lat": 11.4667,
+        "lng": 118.7167
+      },
+      "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1599058945992-d9901848096d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww"
+      ],
+      "map_link": "https://maps.app.goo.gl/example_ironclad"
+    },
+    {
+      "id": "2",
+      "name": "Palawan Iron Gym",
+      "barangay": "Manggahan",
+      "address": "Manggahan Road",
+      "location": {
+        "lat": 11.47,
+        "lng": 118.72
+      },
+      "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1599058945992-d9901848096d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww"
+      ],
+      "map_link": "https://maps.app.goo.gl/example_palawan"
+    },
+    {
+      "id": "3",
+      "name": "Puerto Princesa Fitness Hub",
+      "barangay": "Manggahan",
+      "address": "National Highway",
+      "location": {
+        "lat": 11.475,
+        "lng": 118.725
+      },
+      "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1599058945992-d9901848096d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww"
+      ],
+      "map_link": "https://maps.app.goo.gl/example_pp_fitness"
+    }
+  ]
+}

@@ -1,93 +1,146 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-
+/* 
+  ----------------------------------------------------------------------
+  RADIX 1-12 COLOR SYSTEM TEMPLATE
+  ----------------------------------------------------------------------
+  How to use:
+  1. Paste your Accent hex codes into --accent-1 to --accent-12
+  2. Paste your Neutral/Gray hex codes into --gray-1 to --gray-12
+  3. That's it! The semantic variables below are auto-mapped.
+  ----------------------------------------------------------------------
+*/
 :root {
-  /* Light Mode - Semantic Color Palette */
-  --color-bg-primary: #fff3e5;
-  --color-bg-base: #f4f7f8; /* Usage: Backgrounds; Pairs with: Step 11, 12 text */
-  --color-bg-subtle: #ecf4f7; /* Usage: Backgrounds; Pairs with: Step 11, 12 text */
-  --color-component-base: #d8eff8; /* Usage: Interactive Components; Pairs with: Steps 11 labels, 12 text */
-  --color-component-hover: #c5e8f6; /* Usage: Interactive Components; Pairs with: Steps 11, 12 labels */
-  --color-component-active: #b0dff1; /* Usage: Interactive Components; Pairs with: Step 12 labels */
-  --color-border-subtle: #99d3e9; /* Usage: Borders and seperators; Pairs with: Steps 1-5 backgrounds */
-  --color-border-default: #7ac3de; /* Usage: Borders and seperators; Pairs with: Steps 1-5 backgrounds */
-  --color-border-focus: #3eadd1; /* Usage: Borders, focus rings; Pairs with: Steps 1-5 backgrounds */
-  --color-solid-primary: #19a7ce; /* Usage: Solid Backgrounds, buttons; Pairs with: White text */
-  --color-solid-hover: #149abf; /* Usage: Solid Backgrounds, buttons; Pairs with: White text */
-  --color-text-secondary: #007497; /* Usage: Secondary text, links; Pairs with: Background colors */
-  --color-text-primary: #0e3c4b; /* Usage: High-contrast text; Pairs with: Background colors */
 
-  /* Light Mode - Semantic Gray Palette */
-  --color-surface-app: #fff3e5;
-  --color-surface-card: #ffefe1;
-  --color-surface-elevated: #f5e6d8;
-  --color-surface-hover: #eaded4;
-  --color-surface-active: #e5d6c8;
-  --color-border-muted: #d5cfca;
-  --color-border-subtle-secondary: #d0c3b8;
-  --color-border-strong: #beafa2;
-  --color-text-disabled: #8e8378;
-  --color-text-tertiary: #85786c;
-  --color-text-muted: #645b53;
-  --color-text-default: #221f1d;
+  --accent-1: #f3f5f4; 
+  --accent-2: #ecf1ee; 
+  --accent-3: #deece3; 
+  --accent-4: #cfe5d7; 
+  --accent-5: #bfdcc9; 
+  --accent-6: #aacfb8; 
+  --accent-7: #8ebfa2; 
+  --accent-8: #66a983; 
+  --accent-9: #2f855a; 
+  --accent-10: #1d774d; 
+  --accent-11: #167349;
+  --accent-12: #23392c; 
+  --gray-1: #f4f4f4;
+  --gray-2: #f0f0f0;
+  --gray-3: #e6e6e6;
+  --gray-4: #dedede;
+  --gray-5: #d6d6d6;
+  --gray-6: #cecece;
+  --gray-7: #c2c2c2;
+  --gray-8: #afafaf;
+  --gray-9: #818181;
+  --gray-10: #767676;
+  --gray-11: #585858;
+  --gray-12: #202020;
+
+  /* Backgrounds */
+  --bg-app: var(--gray-1);
+  --bg-panel: var(--gray-2);
+  --bg-accent-subtle: var(--accent-2);
+  /* Interactive Components */
+  --component-bg: var(--gray-3);
+  --component-bg-hover: var(--gray-4);
+  --component-bg-active: var(--gray-5);
+  --accent-component-bg: var(--accent-3);
+  --accent-component-bg-hover: var(--accent-4);
+  --accent-component-bg-active: var(--accent-5);
+  /* Borders */
+  --border-subtle: var(--gray-6);
+  --border-default: var(--gray-7);
+  --border-strong: var(--gray-8);
+  --accent-border-subtle: var(--accent-6);
+  --accent-border-default: var(--accent-7);
+  --accent-border-focus: var(--accent-8);
+  /* Solids */
+  --solid-bg: var(--accent-9);
+  --solid-bg-hover: var(--accent-10);
+  --solid-text: #ffffff;
+  /* Text */
+  --text-low-contrast: var(--gray-11);
+  --text-high-contrast: var(--gray-12);
+  --text-accent-low: var(--accent-11);
+  --text-accent-high: var(--accent-12);
 }
-
 .dark {
-  /* Dark Mode - Semantic Color Palette */
-  --color-bg-primary: #0f1215;
-  --color-bg-base: #071418;
-  --color-bg-subtle: #0d1b1f;
-  --color-component-base: #002c38;
-  --color-component-hover: #00394a;
-  --color-component-active: #00465b;
-  --color-border-subtle: #00556b;
-  --color-border-default: #006982;
-  --color-border-focus: #0082a1;
-  --color-solid-primary: #2bc9f0;
-  --color-solid-hover: #0fbee5;
-  --color-text-secondary: #31ccf3;
-  --color-text-primary: #b1ecff;
+  --accent-1: #151c18;
+  --accent-2: #17211b;
+  --accent-3: #163223;
+  --accent-4: #123f28;
+  --accent-5: #154c31;
+  --accent-6: #1c593b;
+  --accent-7: #226a46;
+  --accent-8: #267e53;
+  --accent-9: #2f855a;
+  --accent-10: #1d774d;
+  --accent-11: #79cc9d;
+  --accent-12: #abf3c8;
+  --gray-1: #1a1a1a;
+  --gray-2: #212121;
+  --gray-3: #292929;
+  --gray-4: #2f2f2f;
+  --gray-5: #363636;
+  --gray-6: #3e3e3e;
+  --gray-7: #4a4a4a;
+  --gray-8: #616161;
+  --gray-9: #6e6e6e;
+  --gray-10: #7c7c7c;
+  --gray-11: #b4b4b4;
+  --gray-12: #eee;
 
-  /* Dark Mode - Semantic Gray Palette */
-  --color-surface-app: #101215;
-  --color-surface-card: #17191c;
-  --color-surface-elevated: #202327;
-  --color-surface-hover: #262a30;
-  --color-surface-active: #2c3138;
-  --color-border-muted: #343a42;
-  --color-border-subtle-secondary: #414852;
-  --color-border-strong: #586170;
-  --color-text-disabled: #656e7d;
-  --color-text-tertiary: #737c8a;
-  --color-text-muted: #adb4bf;
-  --color-text-default: #eceef1;
+  /* Backgrounds */
+    --bg-app: var(--gray-1);
+  --bg-panel: var(--gray-2);
+  --bg-accent-subtle: var(--accent-2);
+  /* Interactive Components */
+  --component-bg: var(--gray-3);
+  --component-bg-hover: var(--gray-4);
+  --component-bg-active: var(--gray-5);
+  --accent-component-bg: var(--accent-3);
+  --accent-component-bg-hover: var(--accent-4);
+  --accent-component-bg-active: var(--accent-5);
+  /* Borders */
+  --border-subtle: var(--gray-6);
+  --border-default: var(--gray-7);
+  --border-strong: var(--gray-8);
+  --accent-border-subtle: var(--accent-6);
+  --accent-border-default: var(--accent-7);
+  --accent-border-focus: var(--accent-8);
+  /* Solids */
+  --solid-bg: var(--accent-9);
+  --solid-bg-hover: var(--accent-10);
+  --solid-text: #ffffff;
+  /* Text */
+  --text-low-contrast: var(--gray-11);
+  --text-high-contrast: var(--gray-12);
+  --text-accent-low: var(--accent-11);
+  --text-accent-high: var(--accent-12);
 }
 
 @theme {
-  --color-bg-primary: var(--color-bg-primary);
-  --color-bg-base: var(--color-bg-base);
-  --color-bg-subtle: var(--color-bg-subtle);
-  --color-component-base: var(--color-component-base);
-  --color-component-hover: var(--color-component-hover);
-  --color-component-active: var(--color-component-active);
-  --color-border-subtle: var(--color-border-subtle);
-  --color-border-default: var(--color-border-default);
-  --color-border-focus: var(--color-border-focus);
-  --color-solid-primary: var(--color-solid-primary);
-  --color-solid-hover: var(--color-solid-hover);
-  --color-text-secondary: var(--color-text-secondary);
-  --color-text-primary: var(--color-text-primary);
-
-  --color-surface-app: var(--color-surface-app);
-  --color-surface-card: var(--color-surface-card);
-  --color-surface-elevated: var(--color-surface-elevated);
-  --color-surface-hover: var(--color-surface-hover);
-  --color-surface-active: var(--color-surface-active);
-  --color-border-muted: var(--color-border-muted);
-  --color-border-subtle-secondary: var(--color-border-subtle-secondary);
-  --color-border-strong: var(--color-border-strong);
-  --color-text-disabled: var(--color-text-disabled);
-  --color-text-tertiary: var(--color-text-tertiary);
-  --color-text-muted: var(--color-text-muted);
-  --color-text-default: var(--color-text-default);
+  --color-bg-app: var(--bg-app);
+  --color-bg-panel: var(--bg-panel);
+  --color-bg-accent-subtle: var(--bg-accent-subtle);
+  --color-component-bg: var(--component-bg);
+  --color-component-bg-hover: var(--component-bg-hover);
+  --color-component-bg-active: var(--component-bg-active);
+  --color-accent-component-bg: var(--accent-component-bg);
+  --color-accent-component-bg-hover: var(--accent-component-bg-hover);
+  --color-accent-component-bg-active: var(--accent-component-bg-active);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+  --color-accent-border-subtle: var(--accent-border-subtle);
+  --color-accent-border-default: var(--accent-border-default);
+  --color-accent-border-focus: var(--accent-border-focus);
+  --color-solid-bg: var(--solid-bg);
+  --color-solid-bg-hover: var(--solid-bg-hover);
+  --color-solid-text: var(--solid-text);
+  --color-text-low-contrast: var(--text-low-contrast);
+  --color-text-high-contrast: var(--text-high-contrast);
+  --color-text-accent-low: var(--text-accent-low);
+  --color-text-accent-high: var(--text-accent-high);
 }

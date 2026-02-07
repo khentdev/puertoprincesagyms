@@ -9,11 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.22.0",
+    "@cloudinary/vue": "^1.13.3",
     "@tailwindcss/vite": "^4.1.18",
-    "@tanstack/vue-query": "^5.92.8",
-    "@thumbmarkjs/thumbmarkjs": "^1.6.1",
-    "@thumbmarkjs/vue": "^1.0.1",
-    "axios": "^1.13.2",
     "lucide-vue-next": "^0.563.0",
     "pinia": "^3.0.4",
     "tailwindcss": "^4.1.18",
