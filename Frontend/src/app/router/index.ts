@@ -1,16 +1,9 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
-
-
+import featureRoutes from "../../features";
 
 
 const routes: RouteRecordRaw[] = [
-    /**
-     * Spread feature routes here 
-     * e.g.
-     * ...featureRoutes
-     * 
-     */
-
+    ...featureRoutes,
     {
         path: "/:pathMatch(.*)*",
         name: "page-not-found",
