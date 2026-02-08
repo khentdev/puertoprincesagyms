@@ -1,7 +1,7 @@
 export interface Gym {
     id: string
     name: string
-    barangay: Omit<Barangays, "All Locations">
+    barangay: ValidBarangays
     address: string
     location: {
         lat: number
@@ -12,4 +12,7 @@ export interface Gym {
     map_link: string
 }
 
-export type Barangays = "All Locations" | "San Pedro" | "Manggahan"
+export const BARANGAYS = ["All Locations", "San Pedro", "Manggahan", "San Miguel"] as const;
+export type Barangays = typeof BARANGAYS[number];
+export type ValidBarangays = Exclude<Barangays, "All Locations">;
+

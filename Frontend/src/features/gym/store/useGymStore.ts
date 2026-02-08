@@ -5,7 +5,7 @@ import type { Barangays, Gym } from "../types";
 import { useStorage } from "@vueuse/core";
 
 export const useGymStore = defineStore("gymStore", () => {
-    const gyms = ref<Gym[]>(gymsJson.gyms)
+    const gyms = ref<Gym[]>(gymsJson.gyms as Gym[])
 
     const selectedBarangay = useStorage<Barangays>("selectedBarangay", "All Locations")
     const setSelectedBarangay = (barangay: Barangays) => {
