@@ -1,15 +1,5 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-/* 
-  ----------------------------------------------------------------------
-  RADIX 1-12 COLOR SYSTEM TEMPLATE
-  ----------------------------------------------------------------------
-  How to use:
-  1. Paste your Accent hex codes into --accent-1 to --accent-12
-  2. Paste your Neutral/Gray hex codes into --gray-1 to --gray-12
-  3. That's it! The semantic variables below are auto-mapped.
-  ----------------------------------------------------------------------
-*/
 :root {
 
   --accent-1: #f3f5f4; 

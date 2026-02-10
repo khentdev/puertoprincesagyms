@@ -1,13 +1,29 @@
 export interface Gym {
     id: string
     name: string
-    barangay: string
+    barangay: ValidBarangays
     address: string
     location: {
         lat: number
         lng: number
     }
+    static_api_url: string
     profile_image: string
     images: string[]
     map_link: string
-}[]
+}
+
+export const BARANGAYS = ["All Locations", "San Pedro", "Manggahan", "San Miguel"] as const;
+export type Barangays = typeof BARANGAYS[number];
+export type ValidBarangays = Exclude<Barangays, "All Locations">;
+
+export interface GymCardData {
+    id: string;
+    name: string;
+    profile_image: string;
+    barangay: ValidBarangays;
+    address: string;
+}
+export interface GymDetailsModalData {
+    gym: Gym
+}
