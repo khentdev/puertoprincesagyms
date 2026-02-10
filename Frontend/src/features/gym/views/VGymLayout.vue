@@ -1,15 +1,13 @@
 <template>
-  <div class="h-screen flex flex-col overflow-hidden">
-    <the-header />
-    <div class="flex flex-1 overflow-hidden">
-      <side-bar />
-      <div class="flex-1 bg-bg-app overflow-y-auto">
-        <router-view v-slot="{ Component }">
-          <keep-alive>
-            <component :is="Component" />
-          </keep-alive>
-        </router-view>
-      </div>
+  <the-header />
+  <div class="flex min-h-[calc(100vh-4.5rem)]">
+    <side-bar />
+    <div class="flex-1 bg-bg-app">
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" />
+        </keep-alive>
+      </router-view>
     </div>
   </div>
 </template>
