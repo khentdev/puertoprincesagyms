@@ -92,7 +92,6 @@ interface GymV2 extends Gym {
 ## Future Enhancements (Post MVP)
 
 - Search gyms by name
-- Filter gyms by barangay
 - View contact information and social links
 - View opening hours
 - Detailed gym descriptions
