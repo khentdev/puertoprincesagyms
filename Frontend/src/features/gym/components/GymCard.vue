@@ -39,6 +39,7 @@
 
       <div class="mt-auto pt-2">
         <button
+          @click="setSelectedGym({ id: props.gym.id })"
           class="w-full py-2 px-4 rounded-md bg-solid-bg text-solid-text text-sm font-medium transition-colors hover:bg-solid-bg-hover active:bg-solid-bg cursor-pointer flex items-center justify-center gap-2 group"
         >
           See more
@@ -51,12 +52,15 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { ArrowRight, MapPin } from "lucide-vue-next";
+import { useGymStore } from "../store/useGymStore";
 import type { GymCardData } from "../types";
-import { MapPin, ArrowRight } from "lucide-vue-next";
 
 interface GymCardProps {
   gym: GymCardData;
 }
 
 const props = defineProps<GymCardProps>();
+const gymStore = useGymStore();
+const { setSelectedGym } = gymStore;
 </script>

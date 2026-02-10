@@ -7,6 +7,7 @@ export interface Gym {
         lat: number
         lng: number
     }
+    static_api_url: string
     profile_image: string
     images: string[]
     map_link: string
@@ -22,4 +23,7 @@ export interface GymCardData {
     profile_image: string;
     barangay: ValidBarangays;
     address: string;
+}
+export interface GymDetailsModalData {
+    gym: Gym
 }
