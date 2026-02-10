@@ -50,6 +50,56 @@
         "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww"
       ],
       "map_link": "https://maps.app.goo.gl/example_pp_fitness"
+    },
+    {
+      "id": "4",
+      "name": "San Pedro Fitness Club",
+      "barangay": "San Pedro",
+      "address": "San Pedro National Highway, near Robinson's Place",
+      "location": {
+        "lat": 11.485,
+        "lng": 118.735
+      },
+      "profile_image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww",
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1599058945992-d9901848096d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww"
+      ],
+      "map_link": "https://maps.app.goo.gl/example_san_pedro"
+    },
+    {
+      "id": "5",
+      "name": "Extreme Power Gym",
+      "barangay": "San Miguel",
+      "address": "Near Old Airport, San Miguel",
+      "location": {
+        "lat": 11.47,
+        "lng": 118.718
+      },
+      "profile_image": "https://images.unsplash.com/photo-1599058945992-d9901848096d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww",
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1599058945992-d9901848096d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fHww"
+      ],
+      "map_link": "https://maps.app.goo.gl/example_extreme"
+    },
+    {
+      "id": "6",
+      "name": "Manggahan Crossfit",
+      "barangay": "Manggahan",
+      "address": "Old Public Market Road, Manggahan",
+      "location": {
+        "lat": 11.472,
+        "lng": 118.722
+      },
+      "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1541534741688-6078c6bfb996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z3ltfGVufDB8fDB8fHww"
+      ],
+      "map_link": "https://maps.app.goo.gl/example_crossfit"
     }
   ]
 }

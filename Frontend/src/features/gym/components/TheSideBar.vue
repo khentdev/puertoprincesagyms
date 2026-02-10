@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-bg-panel w-52 border-r border-border-subtle">
+  <aside class="bg-bg-panel w-52 border-r border-border-subtle sm:block hidden">
     <nav>
       <ul class="flex flex-col gap-2 p-3">
         <template v-for="(item, index) in barangayNavigations" :key="item.id">
@@ -37,7 +37,7 @@
             </div>
             <div
               v-show="selectedBarangay === item.id"
-              class="text-sm text-text-low-contrast truncate"
+              class="text-xs text-solid-text truncate rounded-full bg-solid-bg size-5 flex items-center justify-center"
             >
               {{ getGymCountsInBarangay }}
             </div>

@@ -16,3 +16,10 @@ export const BARANGAYS = ["All Locations", "San Pedro", "Manggahan", "San Miguel
 export type Barangays = typeof BARANGAYS[number];
 export type ValidBarangays = Exclude<Barangays, "All Locations">;
 
+export interface GymCardData {
+    id: string;
+    name: string;
+    profile_image: string;
+    barangay: ValidBarangays;
+    address: string;
+}

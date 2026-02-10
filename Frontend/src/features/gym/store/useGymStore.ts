@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { computed, ref } from "vue";
+import { computed, readonly, ref } from "vue";
 import gymsJson from "../data/gyms.json";
 import type { Barangays, Gym } from "../types";
 import { useStorage } from "@vueuse/core";
@@ -20,11 +20,18 @@ export const useGymStore = defineStore("gymStore", () => {
         return gyms.value.filter((gym) => gym.barangay === selectedBarangay.value)
     })
 
+    const selectedGym = ref<Gym>()
+    const setSelectedGym = (id: string) => {
+        selectedGym.value = gyms.value.find((gym) => gym.id === id)
+    }
+
     return {
-        gyms,
+        gyms: readonly(gyms),
         selectedBarangay,
         setSelectedBarangay,
-        filteredGyms,
-        getGymCountsInBarangay
+        filteredGyms: readonly(filteredGyms),
+        getGymCountsInBarangay,
+        selectedGym: readonly(selectedGym),
+        setSelectedGym
     }
 })
