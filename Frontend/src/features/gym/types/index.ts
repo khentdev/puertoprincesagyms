@@ -27,3 +27,11 @@ export interface GymCardData {
 export interface GymDetailsModalData {
     gym: Gym
 }
+
+export type SortKey = "name" | "barangay"
+export type SortOrder = "asc" | "desc"
+export type SortOption = {
+    label: string
+    key: SortKey
+    order: SortOrder
+}

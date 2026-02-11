@@ -2,7 +2,7 @@ import { useStorage } from "@vueuse/core";
 import { defineStore } from "pinia";
 import { computed, readonly, ref } from "vue";
 import gymsJson from "../data/gyms.json";
-import type { Barangays, Gym } from "../types";
+import type { Barangays, Gym, SortOption } from "../types";
 
 export const useGymStore = defineStore("gymStore", () => {
     const gyms = ref<Gym[]>(gymsJson.gyms as Gym[])
@@ -16,17 +16,33 @@ export const useGymStore = defineStore("gymStore", () => {
     })
 
     const filteredGyms = computed(() => {
-        if (selectedBarangay.value === "All Locations") return gyms.value
-        return gyms.value.filter((gym) => gym.barangay === selectedBarangay.value)
+        const gymsToSort = selectedBarangay.value === "All Locations" ? gyms.value : gyms.value.filter((gym) => gym.barangay === selectedBarangay.value)
+        return [...gymsToSort].sort((a, b) => {
+            const keyA = a[selectedSort.value.key]
+            const keyB = b[selectedSort.value.key]
+
+            if (keyA < keyB) return selectedSort.value.order === "asc" ? -1 : 1
+            if (keyA > keyB) return selectedSort.value.order === "asc" ? 1 : -1
+            return 0
+        })
     })
 
     const selectedGym = ref<Gym | null>(null)
     const setSelectedGym = ({ id }: { id: string }) => {
         selectedGym.value = gyms.value.find((gym) => gym.id === id) || null
     }
-    
+
     const closeSelectedGym = () => {
         selectedGym.value = null
+    }
+
+    const selectedSort = useStorage<SortOption>("selectedSort", {
+        label: "Name (A-Z)",
+        key: "name",
+        order: "asc"
+    })
+    const setSelectedSort = (sort: SortOption) => {
+        selectedSort.value = sort
     }
 
     return {
@@ -37,6 +53,8 @@ export const useGymStore = defineStore("gymStore", () => {
         getGymCountsInBarangay,
         selectedGym: readonly(selectedGym),
         setSelectedGym,
-        closeSelectedGym
+        closeSelectedGym,
+        selectedSort: readonly(selectedSort),
+        setSelectedSort
     }
 })
