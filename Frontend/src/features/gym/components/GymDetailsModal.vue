@@ -74,9 +74,7 @@
               class="w-full h-48 md:h-56 rounded-lg overflow-hidden bg-component-bg ring-1 ring-border-subtle shadow-sm relative group"
             >
               <img
-                :src="
-                  selectedGym.static_api_url || 'https://placehold.co/600x400'
-                "
+                :src="staticMapUrl || 'https://placehold.co/600x400'"
                 alt="Gym Location Map"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
@@ -138,12 +136,17 @@
 <script lang="ts" setup>
 import { MapPin, X } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
-import { onMounted, onUnmounted } from "vue";
+import { computed, onMounted, onUnmounted } from "vue";
 import { useGymStore } from "../store/useGymStore";
+import { generateStaticMapUrl } from "../utils/mapHelpers";
 
 const gymStore = useGymStore();
 const { closeSelectedGym } = gymStore;
 const { selectedGym } = storeToRefs(gymStore);
+
+const staticMapUrl = computed(() =>
+  selectedGym.value ? generateStaticMapUrl(selectedGym.value) : "",
+);
 
 const handleKeydown = (e: KeyboardEvent) => {
   if (e.key === "Escape" && selectedGym.value) {

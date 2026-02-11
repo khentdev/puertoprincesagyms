@@ -2,21 +2,21 @@
   "gyms": [
     {
       "id": "1",
-      "name": "Ironclad Fitness Center",
+      "name": "Fitness Camp Gym",
       "barangay": "San Miguel",
-      "address": "National Highway, Brgy. San Miguel",
+      "address": "Junction 1 Center (between National Book Store and Honda Prestige), Bgy. San Miguel, Puerto Princesa, Philippines, 5300.",
       "location": {
-        "lat": 11.4667,
-        "lng": 118.7167
+        "lat": 9.7409549,
+        "lng": 118.7430675
       },
-      "static_api_url": "https://placehold.co/600x400",
-      "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1770794811/profile_bwpvso.png",
       "images": [
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww"
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770798462/3_mqys1z.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770798460/1_wxo2yq.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770798460/2_aavyec.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770798460/4_h51zuz.jpg"
       ],
-      "map_link": "https://maps.app.goo.gl/example_ironclad"
+      "map_link": "https://www.google.com/maps/place/Fitness+Camp/@9.7409523,118.7431282,19.5z/data=!4m6!3m5!1s0x33b5630b6e50d199:0xf59d189ca05a02fa!8m2!3d9.7409549!4d118.7430675!16s%2Fg%2F11jgn2kxzz?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       "id": "2",
@@ -27,7 +27,6 @@
         "lat": 11.47,
         "lng": 118.72
       },
-      "static_api_url": "https://placehold.co/600x400",
       "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
       "images": [
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
@@ -45,7 +44,6 @@
         "lat": 11.475,
         "lng": 118.725
       },
-      "static_api_url": "https://placehold.co/600x400",
       "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
       "images": [
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
@@ -63,7 +61,6 @@
         "lat": 11.485,
         "lng": 118.735
       },
-      "static_api_url": "https://placehold.co/600x400",
       "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
       "images": [
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
@@ -81,7 +78,6 @@
         "lat": 11.47,
         "lng": 118.718
       },
-      "static_api_url": "https://placehold.co/600x400",
       "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
       "images": [
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
@@ -99,7 +95,6 @@
         "lat": 11.472,
         "lng": 118.722
       },
-      "static_api_url": "https://placehold.co/600x400",
       "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
       "images": [
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
