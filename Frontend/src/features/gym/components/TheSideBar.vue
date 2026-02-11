@@ -125,7 +125,6 @@ const handleBarangayClick = (barangay: Barangays) => {
       params: { barangayName },
     });
 
-  // Close sidebar on mobile after selection
   if (isMobile.value) {
     toggleSidebar();
   }
@@ -146,6 +145,11 @@ const barangayNavigations: BarangayList[] = [
     icon: MapPin,
     id: "San Pedro",
     name: "San Pedro",
+  },
+  {
+    icon: MapPin,
+    id: "San Miguel",
+    name: "San Miguel",
   },
 ];
 </script>

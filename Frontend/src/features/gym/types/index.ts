@@ -7,9 +7,8 @@ export interface Gym {
         lat: number
         lng: number
     }
-    static_api_url: string
     profile_image: string
-    images: string[]
+    images: readonly string[]
     map_link: string
 }
 
