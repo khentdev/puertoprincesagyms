@@ -151,9 +151,17 @@ const gymStore = useGymStore();
 const { closeSelectedGym } = gymStore;
 const { selectedGym } = storeToRefs(gymStore);
 
-const staticMapUrl = computed(() =>
-  selectedGym.value ? generateStaticMapUrl(selectedGym.value) : "",
-);
+const mapUrlCache = new Map<string, string>();
+const staticMapUrl = computed(() => {
+  if (!selectedGym.value) return "";
+
+  const gymId = selectedGym.value.id;
+  if (mapUrlCache.has(gymId)) return mapUrlCache.get(gymId);
+
+  const url = generateStaticMapUrl(selectedGym.value);
+  mapUrlCache.set(gymId, url);
+  return url;
+});
 
 const handleKeydown = (e: KeyboardEvent) => {
   if (e.key === "Escape" && selectedGym.value) {
