@@ -36,7 +36,9 @@
                   "
                   :alt="`${selectedGym.name} profile`"
                   class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  loading="eager"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="high"
                 />
                 <div
                   class="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl pointer-events-none"
@@ -78,6 +80,9 @@
                 alt="Gym Location Map"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                referrerpolicy="no-referrer-when-downgrade"
               />
               <div
                 class="absolute inset-0 pointer-events-none ring-inset ring-1 ring-black/5 rounded-lg"
@@ -105,6 +110,8 @@
                     :alt="`${selectedGym.name} image ${index + 1}`"
                     class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
                   />
                   <div
                     class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"

@@ -7,6 +7,8 @@
         v-if="props.gym.profile_image"
         :src="props.gym.profile_image"
         :alt="props.gym.name"
+        decoding="async"
+        fetchpriority="low"
         class="w-full h-full object-cover rounded-t-lg transition-transform duration-500 hover:scale-105"
         loading="lazy"
       />
