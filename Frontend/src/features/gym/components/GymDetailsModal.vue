@@ -27,7 +27,13 @@
           <div class="p-4 md:p-6 space-y-6">
             <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-start">
               <div
-                class="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden bg-component-bg shadow-md border border-border-subtle/20 group relative"
+                class="shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden bg-component-bg shadow-md border border-border-subtle/20 group relative cursor-pointer"
+                @click="
+                  openImageViewer(
+                    selectedGym.profile_image ||
+                      'https://placehold.co/600x400/2f855a/ffffff?text=Gym',
+                  )
+                "
               >
                 <img
                   :src="
@@ -73,7 +79,10 @@
             </div>
 
             <div
-              class="w-full h-48 md:h-56 rounded-lg overflow-hidden bg-component-bg ring-1 ring-border-subtle shadow-sm relative group"
+              class="w-full h-48 md:h-56 rounded-lg overflow-hidden bg-component-bg ring-1 ring-border-subtle shadow-sm relative group cursor-pointer"
+              @click="
+                openImageViewer(staticMapUrl || 'https://placehold.co/600x400')
+              "
             >
               <img
                 :src="staticMapUrl || 'https://placehold.co/600x400'"
@@ -103,7 +112,8 @@
                 <div
                   v-for="(img, index) in selectedGym.images"
                   :key="index"
-                  class="aspect-video rounded-lg overflow-hidden bg-component-bg ring-1 ring-border-subtle shadow-sm relative group"
+                  class="aspect-video rounded-lg overflow-hidden bg-component-bg ring-1 ring-border-subtle shadow-sm relative group cursor-pointer"
+                  @click="openImageViewer(img)"
                 >
                   <img
                     :src="img"
@@ -137,15 +147,22 @@
         </div>
       </div>
     </transition>
+    <ImageViewerModal
+      :is-open="isImageViewerOpen"
+      :images="viewerImages"
+      :initial-index="viewerInitialIndex"
+      @close="closeImageViewer"
+    />
   </teleport>
 </template>
 
 <script lang="ts" setup>
 import { MapPin, X } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
-import { computed, onMounted, onUnmounted } from "vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
 import { useGymStore } from "../store/useGymStore";
 import { generateStaticMapUrl } from "../utils/mapHelpers";
+import ImageViewerModal from "./ImageViewerModal.vue";
 
 const gymStore = useGymStore();
 const { closeSelectedGym } = gymStore;
@@ -162,6 +179,44 @@ const staticMapUrl = computed(() => {
   mapUrlCache.set(gymId, url);
   return url;
 });
+
+const isImageViewerOpen = ref(false);
+const viewerImages = computed(() => {
+  if (!selectedGym.value) return [];
+
+  const images = [];
+  images.push({
+    url: selectedGym.value.profile_image,
+    alt: `${selectedGym.value.name} profile`,
+  });
+
+  images.push({
+    url: staticMapUrl.value!,
+    alt: "Gym Location Map",
+  });
+
+  if (selectedGym.value.images && selectedGym.value.images.length > 0) {
+    selectedGym.value.images.forEach((img, index) => {
+      images.push({
+        url: img,
+        alt: `${selectedGym.value!.name} image ${index + 1}`,
+      });
+    });
+  }
+  return images;
+});
+
+const viewerInitialIndex = ref(0);
+
+function openImageViewer(imageUrl: string) {
+  const index = viewerImages.value.findIndex((img) => img.url === imageUrl);
+  viewerInitialIndex.value = index >= 0 ? index : 0;
+  isImageViewerOpen.value = true;
+}
+
+function closeImageViewer() {
+  isImageViewerOpen.value = false;
+}
 
 const handleKeydown = (e: KeyboardEvent) => {
   if (e.key === "Escape" && selectedGym.value) {
