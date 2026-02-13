@@ -160,6 +160,7 @@
 import { MapPin, X } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
 import { computed, onMounted, onUnmounted, ref } from "vue";
+import { getBarangayMapOptions } from "../config/barangayMapConfig";
 import { useGymStore } from "../store/useGymStore";
 import { generateStaticMapUrl } from "../utils/mapHelpers";
 import ImageViewerModal from "./ImageViewerModal.vue";
@@ -175,7 +176,8 @@ const staticMapUrl = computed(() => {
   const gymId = selectedGym.value.id;
   if (mapUrlCache.has(gymId)) return mapUrlCache.get(gymId);
 
-  const url = generateStaticMapUrl(selectedGym.value);
+  const barangayOptions = getBarangayMapOptions(selectedGym.value.barangay);
+  const url = generateStaticMapUrl(selectedGym.value, barangayOptions);
   mapUrlCache.set(gymId, url);
   return url;
 });

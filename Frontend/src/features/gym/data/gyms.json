@@ -20,20 +20,21 @@
     },
     {
       "id": "2",
-      "name": "Palawan Iron Gym",
-      "barangay": "Manggahan",
-      "address": "Manggahan Road",
+      "name": "Ironworks Fitness Gym",
+      "barangay": "Maunlad",
+      "address": "102 Abad Santos Cor. Lacao Sts. Puerto Princesa CIty, Puerto Princesa, Philippines.",
       "location": {
-        "lat": 11.47,
-        "lng": 118.72
+        "lat": 9.7353433,
+        "lng": 118.7396882
       },
-      "profile_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1770990576/profile_crd9nb.jpg",
       "images": [
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww"
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770990591/4_jzrxqz.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770990592/2_x6ovbq.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770990583/1_zrthfh.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770990606/3_uidbuu.jpg"
       ],
-      "map_link": "https://maps.app.goo.gl/example_palawan"
+      "map_link": "https://www.google.com/maps/place/Iron+works/@9.7352851,118.7397641,18.2z/data=!4m10!1m2!2m1!1siron+works!3m6!1s0x33b5638e442814cb:0x1f91e327bc619f9c!8m2!3d9.7353433!4d118.7396882!15sCgppcm9uIHdvcmtzWgwiCmlyb24gd29ya3OSAQNneW2aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnhTUmxkc2FISlRWbFpvVkVkR1NWUlhTVEZYYXpWUFRWaFdVVlpJWXhBQuABAPoBBAgAEEo!16s%2Fg%2F11hz99v5_z?entry=ttu&g_ep=EgoyMDI2MDIxMC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       "id": "3",

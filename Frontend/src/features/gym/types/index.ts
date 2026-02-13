@@ -12,7 +12,7 @@ export interface Gym {
     map_link: string
 }
 
-export const BARANGAYS = ["All Locations", "San Pedro", "Manggahan", "San Miguel"] as const;
+export const BARANGAYS = ["All Locations", "San Pedro", "Manggahan", "San Miguel", "Maunlad"] as const;
 export type Barangays = typeof BARANGAYS[number];
 export type ValidBarangays = Exclude<Barangays, "All Locations">;
 

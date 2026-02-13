@@ -151,6 +151,11 @@ const barangayNavigations: BarangayList[] = [
     id: "San Miguel",
     name: "San Miguel",
   },
+  {
+    icon: MapPin,
+    id: "Maunlad",
+    name: "Maunlad",
+  },
 ];
 </script>
 
