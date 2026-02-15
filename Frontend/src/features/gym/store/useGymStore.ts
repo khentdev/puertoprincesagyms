@@ -15,6 +15,7 @@ export const useGymStore = defineStore("gymStore", () => {
         return gyms.value.filter((gym) => gym.barangay === selectedBarangay.value).length
     })
 
+    const MAX_CACHE_SIZE = 50
     const sortedCache = new Map<string, Gym[]>()
     const filteredGyms = computed(() => {
         const cacheKey = `${selectedBarangay.value}-${selectedSort.value.key}-${selectedSort.value.order}`
@@ -31,6 +32,11 @@ export const useGymStore = defineStore("gymStore", () => {
             if (keyA > keyB) return selectedSort.value.order === "asc" ? 1 : -1
             return 0
         })
+
+        if (sortedCache.size >= MAX_CACHE_SIZE) {
+            const firstKey = sortedCache.keys().next().value!
+            sortedCache.delete(firstKey)
+        }
 
         sortedCache.set(cacheKey, sortedGyms)
         return sortedGyms

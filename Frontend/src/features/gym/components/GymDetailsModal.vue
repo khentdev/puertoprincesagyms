@@ -169,6 +169,7 @@ const gymStore = useGymStore();
 const { closeSelectedGym } = gymStore;
 const { selectedGym } = storeToRefs(gymStore);
 
+const MAX_CACHE_SIZE = 50;
 const mapUrlCache = new Map<string, string>();
 const staticMapUrl = computed(() => {
   if (!selectedGym.value) return "";
@@ -178,6 +179,12 @@ const staticMapUrl = computed(() => {
 
   const barangayOptions = getBarangayMapOptions(selectedGym.value.barangay);
   const url = generateStaticMapUrl(selectedGym.value, barangayOptions);
+
+  if (mapUrlCache.size >= MAX_CACHE_SIZE) {
+    const firstKey = mapUrlCache.keys().next().value!;
+    mapUrlCache.delete(firstKey);
+  }
+
   mapUrlCache.set(gymId, url);
   return url;
 });
