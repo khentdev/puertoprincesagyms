@@ -160,6 +160,7 @@
 import { MapPin, X } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
 import { computed, onMounted, onUnmounted, ref } from "vue";
+import { getBarangayMapOptions } from "../config/barangayMapConfig";
 import { useGymStore } from "../store/useGymStore";
 import { generateStaticMapUrl } from "../utils/mapHelpers";
 import ImageViewerModal from "./ImageViewerModal.vue";
@@ -168,6 +169,7 @@ const gymStore = useGymStore();
 const { closeSelectedGym } = gymStore;
 const { selectedGym } = storeToRefs(gymStore);
 
+const MAX_CACHE_SIZE = 50;
 const mapUrlCache = new Map<string, string>();
 const staticMapUrl = computed(() => {
   if (!selectedGym.value) return "";
@@ -175,7 +177,14 @@ const staticMapUrl = computed(() => {
   const gymId = selectedGym.value.id;
   if (mapUrlCache.has(gymId)) return mapUrlCache.get(gymId);
 
-  const url = generateStaticMapUrl(selectedGym.value);
+  const barangayOptions = getBarangayMapOptions(selectedGym.value.barangay);
+  const url = generateStaticMapUrl(selectedGym.value, barangayOptions);
+
+  if (mapUrlCache.size >= MAX_CACHE_SIZE) {
+    const firstKey = mapUrlCache.keys().next().value!;
+    mapUrlCache.delete(firstKey);
+  }
+
   mapUrlCache.set(gymId, url);
   return url;
 });
