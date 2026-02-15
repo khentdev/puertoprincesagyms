@@ -11,9 +11,11 @@ export const useGymStore = defineStore("gymStore", () => {
     const setSelectedBarangay = (barangay: Barangays) => {
         selectedBarangay.value = barangay
     }
-    const getGymCountsInBarangay = computed(() => {
-        return gyms.value.filter((gym) => gym.barangay === selectedBarangay.value).length
-    })
+    const getGymCountsInBarangay = computed(() =>
+        gyms.value.filter((gym) => gym.barangay === selectedBarangay.value).length
+    )
+
+    const allGymCount = computed(() => gyms.value.length);
 
     const MAX_CACHE_SIZE = 50
     const sortedCache = new Map<string, Gym[]>()
@@ -27,7 +29,6 @@ export const useGymStore = defineStore("gymStore", () => {
         const sortedGyms = [...gymsToSort].sort((a, b) => {
             const keyA = a[selectedSort.value.key]
             const keyB = b[selectedSort.value.key]
-
             if (keyA < keyB) return selectedSort.value.order === "asc" ? -1 : 1
             if (keyA > keyB) return selectedSort.value.order === "asc" ? 1 : -1
             return 0
@@ -37,7 +38,6 @@ export const useGymStore = defineStore("gymStore", () => {
             const firstKey = sortedCache.keys().next().value!
             sortedCache.delete(firstKey)
         }
-
         sortedCache.set(cacheKey, sortedGyms)
         return sortedGyms
     })
@@ -70,6 +70,7 @@ export const useGymStore = defineStore("gymStore", () => {
         setSelectedGym,
         closeSelectedGym,
         selectedSort: readonly(selectedSort),
-        setSelectedSort
+        setSelectedSort,
+        allGymCount: readonly(allGymCount),
     }
 })
