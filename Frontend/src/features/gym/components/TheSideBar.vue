@@ -138,13 +138,8 @@ const barangayNavigations: BarangayList[] = [
   },
   {
     icon: MapPin,
-    id: "Manggahan",
-    name: "Manggahan",
-  },
-  {
-    icon: MapPin,
-    id: "San Pedro",
-    name: "San Pedro",
+    id: "Sicsican",
+    name: "Sicsican",
   },
   {
     icon: MapPin,
@@ -156,7 +151,37 @@ const barangayNavigations: BarangayList[] = [
     id: "Maunlad",
     name: "Maunlad",
   },
-];
+  {
+    icon: MapPin,
+    id: "San Manuel",
+    name: "San Manuel",
+  },
+  {
+    icon: MapPin,
+    id: "Santa Monica",
+    name: "Santa Monica",
+  },
+  {
+    icon: MapPin,
+    id: "San Jose",
+    name: "San Jose",
+  },
+  {
+    icon: MapPin,
+    id: "Tagumpay",
+    name: "Tagumpay",
+  },
+  {
+    icon: MapPin,
+    id: "Tiniguiban",
+    name: "Tiniguiban",
+  },
+  {
+    icon: MapPin,
+    id: "San Pedro",
+    name: "San Pedro",
+  },
+].sort((a, b) => a.name.localeCompare(b.name)) as BarangayList[];
 </script>
 
 <style scoped>

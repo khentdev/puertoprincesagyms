@@ -16,7 +16,7 @@
         "https://res.cloudinary.com/duasfk8fg/image/upload/v1770798460/2_aavyec.jpg",
         "https://res.cloudinary.com/duasfk8fg/image/upload/v1770798460/4_h51zuz.jpg"
       ],
-      "map_link": "https://www.google.com/maps/place/Fitness+Camp/@9.7409523,118.7431282,19.5z/data=!4m6!3m5!1s0x33b5630b6e50d199:0xf59d189ca05a02fa!8m2!3d9.7409549!4d118.7430675!16s%2Fg%2F11jgn2kxzz?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
+      "map_link": "https://maps.app.goo.gl/2vA7UZDJBK7SnWmNA"
     },
     {
       "id": "2",
@@ -34,7 +34,239 @@
         "https://res.cloudinary.com/duasfk8fg/image/upload/v1770990583/1_zrthfh.jpg",
         "https://res.cloudinary.com/duasfk8fg/image/upload/v1770990606/3_uidbuu.jpg"
       ],
-      "map_link": "https://www.google.com/maps/place/Iron+works/@9.7352851,118.7397641,18.2z/data=!4m10!1m2!2m1!1siron+works!3m6!1s0x33b5638e442814cb:0x1f91e327bc619f9c!8m2!3d9.7353433!4d118.7396882!15sCgppcm9uIHdvcmtzWgwiCmlyb24gd29ya3OSAQNneW2aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnhTUmxkc2FISlRWbFpvVkVkR1NWUlhTVEZYYXpWUFRWaFdVVlpJWXhBQuABAPoBBAgAEEo!16s%2Fg%2F11hz99v5_z?entry=ttu&g_ep=EgoyMDI2MDIxMC4wIKXMDSoASAFQAw%3D%3D"
+      "map_link": "https://maps.app.goo.gl/93SFFX7q4e16UG9X8"
+    },
+    {
+      "id": "3",
+      "name": "FusionFit Gym",
+      "barangay": "San Manuel",
+      "address": "L14 Blk 8 Kalayaan Homeowners' Association, San Manuel Road, Puerto Princesa City, 5300 Palawan.",
+      "location": {
+        "lat": 9.7744726,
+        "lng": 118.7619618
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1770993221/profile_gjapje.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770993243/3_nnbgwg.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770993240/4_c6jcxi.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770993237/2_ucchyd.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1770993238/1_whog8b.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/9UntA4juUyo4Jdwb9"
+    },
+    {
+      "id": "4",
+      "name": "Fitness Factor Palawan",
+      "barangay": "Santa Monica",
+      "address": "Reginio Avenue Cor. Rosal Street, Brgy. Santa Monica, Mountain View Zone 1, Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.7934645,
+        "lng": 118.7301137
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771108353/profile_yoc5xw.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771108351/2_izk6zv.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771108348/1_qoz8ql.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771108348/3_rn20tt.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771108348/4_qfoebu.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/Br6ykZzQ8ZqBrXo5A"
+    },
+    {
+      "id": "5",
+      "name": "IronCore Fitness Gym",
+      "barangay": "San Jose",
+      "address": "St. Mary Covered Court, Makopa St., Brgy. San Jose, PPC, Palawan.",
+      "location": {
+        "lat": 9.7905142,
+        "lng": 118.7517816
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109414/profile1_xwnmg3.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109411/1_mhqjdl.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109409/2_xxzdwy.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109410/4_ickr2q.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109410/3_nbpzw4.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/s8LZaDZppG5vDhuB8"
+    },
+    {
+      "id": "6",
+      "name": "Sunlight Gym and Bodyworks",
+      "barangay": "Tagumpay",
+      "address": "Malvar Street, Barangay Tagumpay, Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.7427164,
+        "lng": 118.734288
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771110067/profile1_h02qkz.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109896/2_xeajfb.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109895/3_rcbd6t.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109892/1_pbeevf.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771109892/4_i2mwmx.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/Sj9mN9xvryVWBvLL8"
+    },
+    {
+      "id": "7",
+      "name": "Always Active Fitness",
+      "barangay": "San Jose",
+      "address": "Skytel, Commercial Building, Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.7824187,
+        "lng": 118.7478928
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771111495/profil1_cev3ay.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771111492/3_ts08ew.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771111489/2_jxwyhh.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771111484/4_z6ouno.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771111483/1_rinbjy.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/4h6SDuXdDhjoR2Z78"
+    },
+    {
+      "id": "8",
+      "name": "Seconds Fitness",
+      "barangay": "Santa Monica",
+      "address": "2nd Floor, Paul Michael Warehouse, PME Compound, Barangay Sta. Monica, Puerto Princesa City, Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.7879739,
+        "lng": 118.7378802
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771112961/profile_vm9f8x.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771112975/4_qgeq3e.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771112972/3_kspjva.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771112971/2_qbhgni.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771112967/1_naznzk.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/hcgZbBaUU2PAYndn7"
+    },
+    {
+      "id": "9",
+      "name": "Cuerpo Fitness Gym",
+      "barangay": "Tiniguiban",
+      "address": "PSU Road, Brgy. Tiniguiban, Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.778854,
+        "lng": 118.735928
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771135982/profile_ekoofq.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771135898/3_jnnt91.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771135898/1_aavjif.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771135896/4_z4niif.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771135897/2_ldrsld.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/31LrE9nTHSeE2ZVD8"
+    },
+    {
+      "id": "10",
+      "name": "XXL Gym Puerto Princesa",
+      "barangay": "Sicsican",
+      "address": "Dimalanta Road, Brgy. Sicsican, PPC.",
+      "location": {
+        "lat": 9.7976912,
+        "lng": 118.7128429
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771137479/profile_ity9al.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771137484/4_tyny88.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771137482/3_ora0zy.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771137482/1_kb55ri.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771137481/2_rqvswu.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/8ePsLkTvuqREXNh17"
+    },
+    {
+      "id": "11",
+      "name": "Island Punch Fitness",
+      "barangay": "San Pedro",
+      "address": "Kalikasan Homes Brgy Sanpedro, Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.753542,
+        "lng": 118.7610548
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771138849/profile_pfwxls.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771138857/4_sy9gfi.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771138855/2_qbyrto.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771138855/3_ks6ltg.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771138853/1_tr6ifq.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/rcGP6Q84PEiKaY4M7"
+    },
+    {
+      "id": "12",
+      "name": "Mizar Fitness Gym",
+      "barangay": "San Miguel",
+      "address": "PPVR+R3J, Puerto Princesa City, Palawan.",
+      "location": {
+        "lat": 9.7445904,
+        "lng": 118.7401395
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771139693/profile_g78gco.png",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771139615/2_ok28zh.png",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771139611/1_gqdopi.png"
+      ],
+      "map_link": "https://maps.app.goo.gl/E9b4vRVoGEjASgcDA"
+    },
+    {
+      "id": "13",
+      "name": "Cold One Gym",
+      "barangay": "Maunlad",
+      "address": "Mabini Street, Brgy. Maunlad, PPC @ the back of Melvicris Water Refilling Station, Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.7331943,
+        "lng": 118.7396255
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771140792/profile_jxrs1v.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771140788/4_qbkgfc.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771140786/3_aqncks.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771140785/1_v5qjgq.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771140783/2_ahzawf.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/7GrMcNJ9BjxiH2Lu6"
+    },
+    {
+      "id": "14",
+      "name": "Palmetcon Fitness",
+      "barangay": "San Miguel",
+      "address": "P. Vicente St, San Miguel, Puerto Princesa City, 5300 Palawan.",
+      "location": {
+        "lat": 9.7412364,
+        "lng": 118.7426957
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771141448/profile_hgo3cx.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771141420/4_in2pqr.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771141416/3_rxlz9w.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771141415/2_lyt2cz.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771141414/1_qdnbul.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/GzNB8AjW6WdXEmHN8"
+    },
+    {
+      "id": "15",
+      "name": "Ground Zero Fitness Gym",
+      "barangay": "San Miguel",
+      "address": "Malvar Street (Behind GearSpot), Puerto Princesa, Philippines.",
+      "location": {
+        "lat": 9.7435627,
+        "lng": 118.7387411
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1771143839/profile_ue8gwl.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771142953/2_gta009.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771142948/4_f6nwdh.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771142947/1_fjeozx.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1771142944/3_itkawg.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/GzNB8AjW6WdXEmHN8"
     }
   ]
 }
