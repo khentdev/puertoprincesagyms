@@ -6,6 +6,6 @@ export const MAPS_CONFIG = {
         baseUrl: "https://maps.googleapis.com/maps/api/staticmap",
         defaultZoom: 17,
         defaultSize: { width: 700, height: 700 },
-        markerColor: "red",
+        markerColor: "0x2f855a",
     },
 } as const

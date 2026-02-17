@@ -140,6 +140,7 @@ function prevImage() {
 }
 
 function handleKeydown(e: KeyboardEvent) {
+  if (!props.isOpen) return;
   if (e.key === "Escape") {
     e.stopImmediatePropagation();
     close();
