@@ -6,11 +6,11 @@
       <h1
         class="sm:text-3xl text-2xl text-text-high-contrast font-extrabold tracking-tight"
       >
-        Gyms in Brgy. {{ selectedBarangay }}
+        {{ selectedBarangayLabel }}
       </h1>
-      <span class="text-xs sm:text-sm text-text-low-contrast"
-        >Showing {{ getGymCountsInBarangay }} results found in this area.</span
-      >
+      <span class="text-xs sm:text-sm text-text-low-contrast">{{
+        getGymCountLabel
+      }}</span>
     </div>
     <div
       class="flex items-center justify-start gap-3 md:justify-center mt-10 md:mt-auto shrink-0"
@@ -75,14 +75,32 @@
 <script lang="ts" setup>
 import { ChevronDown, Check } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useGymStore } from "../store/useGymStore";
 import { vOnClickOutside } from "@vueuse/components";
 import type { SortOption } from "../types";
 
 const gymStore = useGymStore();
-const { selectedBarangay, getGymCountsInBarangay, selectedSort } =
+const { selectedBarangay, allGymCount, getGymCountsInBarangay, selectedSort } =
   storeToRefs(gymStore);
+
+const selectedBarangayLabel = computed(() =>
+  selectedBarangay.value === "All Locations"
+    ? "All Locations"
+    : `Gyms in Brgy. ${selectedBarangay.value}`,
+);
+
+const getGymCountLabel = computed(() => {
+  const count =
+    selectedBarangay.value === "All Locations"
+      ? allGymCount.value
+      : getGymCountsInBarangay.value;
+  const suffix = count === 1 ? "gym" : "gyms";
+
+  return selectedBarangay.value === "All Locations"
+    ? `Showing ${count} ${suffix} in Puerto Princesa`
+    : `Showing ${count} ${suffix} in this area`;
+});
 
 const sortOptions = computed(() => {
   const baseOptions: SortOption[] = [
@@ -110,4 +128,14 @@ const handleSelectSort = (sort: SortOption) => {
   gymStore.setSelectedSort(sort);
   isSortDropdownOpen.value = false;
 };
+
+watch(selectedBarangay, (_, oldVal) => {
+  if (oldVal === "All Locations") {
+    gymStore.setSelectedSort({
+      label: "Name (A-Z)",
+      key: "name",
+      order: "asc",
+    });
+  }
+});
 </script>

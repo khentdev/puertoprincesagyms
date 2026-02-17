@@ -78,7 +78,7 @@
                 v-show="selectedBarangay === item.id"
                 class="text-xs text-solid-text truncate rounded-full bg-solid-bg size-5 flex items-center justify-center"
               >
-                {{ getGymCountsInBarangay }}
+                {{ getGymCountLabel }}
               </div>
             </li>
             <div
@@ -96,7 +96,7 @@
 import type { LucideProps } from "lucide-vue-next";
 import { Map, MapPin, X } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
-import { type FunctionalComponent } from "vue";
+import { computed, type FunctionalComponent } from "vue";
 import { useRouter } from "vue-router";
 import { useDeviceDetection } from "../../../shared/composables/useDeviceOrientation";
 import { useToggleSidebar } from "../composables/useToggleSidebar";
@@ -105,9 +105,16 @@ import type { Barangays } from "../types";
 
 const router = useRouter();
 const gymStore = useGymStore();
-const { selectedBarangay, getGymCountsInBarangay } = storeToRefs(gymStore);
+const { selectedBarangay, getGymCountsInBarangay, allGymCount } =
+  storeToRefs(gymStore);
 const { isSidebarOpen, toggleSidebar } = useToggleSidebar();
 const { isMobile } = useDeviceDetection();
+
+const getGymCountLabel = computed(() =>
+  selectedBarangay.value === "All Locations"
+    ? allGymCount.value
+    : getGymCountsInBarangay.value,
+);
 
 interface BarangayList {
   icon: FunctionalComponent<LucideProps>;
