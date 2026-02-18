@@ -41,6 +41,7 @@
   </section>
 </template>
 <script lang="ts" setup>
+import { useSeoMeta } from "@unhead/vue";
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
 import { CustomMarker, GoogleMap, MarkerCluster } from "vue3-google-map";
@@ -52,6 +53,15 @@ import { useGymStore } from "../store/useGymStore";
 
 const gymStore = useGymStore();
 const { filteredGyms } = storeToRefs(gymStore);
+
+useSeoMeta({
+  title: "Puerto Princesa Gyms Map",
+  description:
+    "Explore all gyms in Puerto Princesa City on our interactive map.",
+  ogTitle: "Puerto Princesa Gyms Map",
+  ogDescription:
+    "Explore all gyms in Puerto Princesa City on our interactive map.",
+});
 
 const center = { lat: 9.73917, lng: 118.73528 };
 const mapRef = ref<InstanceType<typeof GoogleMap>>();

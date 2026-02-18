@@ -9,11 +9,29 @@
   </section>
 </template>
 <script lang="ts" setup>
-import Header from "../components/Header.vue";
-import GymCard from "../components/GymCard.vue";
-import { useGymStore } from "../store/useGymStore";
+import { useSeoMeta } from "@unhead/vue";
 import { storeToRefs } from "pinia";
+import { computed } from "vue";
+import GymCard from "../components/GymCard.vue";
+import Header from "../components/Header.vue";
+import { useGymStore } from "../store/useGymStore";
 
 const gymStore = useGymStore();
-const { filteredGyms } = storeToRefs(gymStore);
+const { filteredGyms, selectedBarangay } = storeToRefs(gymStore);
+
+const title = computed(
+  () => `Gyms in ${selectedBarangay.value} - Puerto Princesa`,
+);
+
+const description = computed(
+  () =>
+    `Browse gyms located in ${selectedBarangay.value}, Puerto Princesa City.`,
+);
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+});
 </script>
