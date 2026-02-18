@@ -29,6 +29,14 @@
 </template>
 
 <script setup lang="ts">
+import { useSeoMeta } from "@unhead/vue";
 import { ArrowLeft, MapPinOff } from "lucide-vue-next";
 import { RouterLink } from "vue-router";
+
+useSeoMeta({
+  robots: { noindex: true, follow: true },
+  title: "Page Not Found - Puerto Princesa Gyms",
+  description:
+    "The gym page you are looking for doesn't exist or has been moved.",
+});
 </script>

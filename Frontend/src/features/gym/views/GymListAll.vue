@@ -55,12 +55,18 @@ const gymStore = useGymStore();
 const { filteredGyms } = storeToRefs(gymStore);
 
 useSeoMeta({
-  title: "Puerto Princesa Gyms Map",
+  title: "Find Gyms in Puerto Princesa - Complete Gym Directory",
   description:
-    "Explore all gyms in Puerto Princesa City on our interactive map.",
-  ogTitle: "Puerto Princesa Gyms Map",
+    "Browse all gyms in Puerto Princesa, Palawan. Find fitness centers, boxing gyms, and more on our interactive map.",
+  ogTitle: "Find Gyms in Puerto Princesa - Complete Gym Directory",
   ogDescription:
-    "Explore all gyms in Puerto Princesa City on our interactive map.",
+    "Browse all gyms in Puerto Princesa, Palawan. Find fitness centers, boxing gyms, and more on our interactive map.",
+  ogUrl: "https://puertoprincesagyms.vercel.app/",
+  ogType: "website",
+  ogImage: "https://puertoprincesagyms.vercel.app/og-banner.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: "Puerto Princesa Gyms - Interactive Gym Map & Directory",
 });
 
 const center = { lat: 9.73917, lng: 118.73528 };
