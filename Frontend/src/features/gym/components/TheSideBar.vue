@@ -48,38 +48,43 @@
             >
               Barangays
             </h1>
-            <li
-              @click="handleBarangayClick(item.id)"
-              class="flex items-center gap-3 justify-between px-2 cursor-pointer py-2 rounded group"
-            >
-              <div class="flex items-center gap-3 shrink-0">
-                <component
-                  :is="item.icon"
-                  :key="item.id"
-                  :class="[
-                    selectedBarangay === item.id
-                      ? 'stroke-text-accent-low'
-                      : 'stroke-text-low-contrast group-hover:stroke-text-high-contrast',
-                  ]"
-                  class="size-5 transition-colors"
-                />
-                <span
-                  :key="item.id"
-                  :class="[
-                    selectedBarangay === item.id
-                      ? 'text-text-accent-low'
-                      : 'text-text-low-contrast group-hover:text-text-high-contrast',
-                  ]"
-                  class="text-sm font-medium transition-colors"
-                  >{{ item.name }}</span
-                >
-              </div>
-              <div
-                v-show="selectedBarangay === item.id"
-                class="text-xs text-solid-text truncate rounded-full bg-solid-bg size-5 flex items-center justify-center"
+            <li>
+              <button
+                tabindex="0"
+                :aria-selected="selectedBarangay === item.id"
+                @click="handleBarangayClick(item.id)"
+                @keydown.enter="handleBarangayClick(item.id)"
+                class="w-full flex items-center gap-3 justify-between px-2 cursor-pointer py-2 rounded group focus:outline-none"
               >
-                {{ getGymCountLabel }}
-              </div>
+                <div class="flex items-center gap-3 shrink-0">
+                  <component
+                    :is="item.icon"
+                    :key="item.id"
+                    :class="[
+                      selectedBarangay === item.id
+                        ? 'stroke-text-accent-low'
+                        : 'stroke-text-low-contrast group-hover:stroke-text-high-contrast group-focus:stroke-text-high-contrast',
+                    ]"
+                    class="size-5 transition-colors"
+                  />
+                  <span
+                    :key="item.id"
+                    :class="[
+                      selectedBarangay === item.id
+                        ? 'text-text-accent-low'
+                        : 'text-text-low-contrast group-hover:text-text-high-contrast group-focus:text-text-high-contrast',
+                    ]"
+                    class="text-sm font-medium transition-colors"
+                    >{{ item.name }}</span
+                  >
+                </div>
+                <div
+                  v-show="selectedBarangay === item.id"
+                  class="text-xs text-solid-text truncate rounded-full bg-solid-bg size-5 flex items-center justify-center"
+                >
+                  {{ getGymCountLabel }}
+                </div>
+              </button>
             </li>
             <div
               class="w-full h-px bg-border-subtle"
@@ -87,6 +92,48 @@
             ></div>
           </template>
         </ul>
+        <div class="w-full rounded-full p-3 mb-3 flex items-start flex-col">
+          <button
+            class="px-2 py-2 cursor-pointer rounded-full bg-component-bg border border-border-subtle w-14 h-7 flex items-center relative hover:border-accent-border-focus transition-colors"
+            @click="setTheme(currentTheme === 'dark' ? 'light' : 'dark')"
+          >
+            <TransitionGroup
+              move-class="transition-all duration-300 ease-in-out"
+              enter-active-class="transition-all duration-300 ease-in-out"
+              leave-active-class="transition-all duration-300 ease-in-out"
+              enter-from-class="opacity-0"
+              leave-to-class="opacity-0"
+              enter-to-class="opacity-100"
+              leave-from-class="opacity-100"
+            >
+              <div
+                key="theme"
+                class="size-6.5 rounded-full flex items-center justify-center bg-component-bg-active absolute shadow shadow-black/25"
+                :class="[currentTheme === 'dark' ? 'left-0' : 'right-0']"
+              >
+                <transition
+                  enter-active-class="transition-all absolute w-full duration-300 ease-in-out"
+                  leave-active-class="transition-all absolute w-full duration-300 ease-in-out"
+                  enter-from-class="opacity-0"
+                  leave-to-class="opacity-0"
+                  enter-to-class="opacity-100"
+                  leave-from-class="opacity-100"
+                >
+                  <Moon
+                    key="dark"
+                    v-if="currentTheme === 'dark'"
+                    class="stroke-text-high-contrast size-5"
+                  />
+                  <Sun
+                    key="light"
+                    v-else
+                    class="stroke-text-low-contrast size-5"
+                  />
+                </transition>
+              </div>
+            </TransitionGroup>
+          </button>
+        </div>
       </nav>
     </aside>
   </Transition>
@@ -94,19 +141,22 @@
 
 <script lang="ts" setup>
 import type { LucideProps } from "lucide-vue-next";
-import { Map, MapPin, X } from "lucide-vue-next";
+import { Map, MapPin, Moon, Sun, X } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
 import { computed, type FunctionalComponent } from "vue";
 import { useRouter } from "vue-router";
+import { useColorMode } from "../../../shared/composables/useDarkMode";
 import { useDeviceDetection } from "../../../shared/composables/useDeviceOrientation";
 import { useToggleSidebar } from "../composables/useToggleSidebar";
 import { useGymStore } from "../store/useGymStore";
 import type { Barangays } from "../types";
 
+const { currentTheme, setTheme } = useColorMode();
 const router = useRouter();
 const gymStore = useGymStore();
 const { selectedBarangay, getGymCountsInBarangay, allGymCount } =
   storeToRefs(gymStore);
+
 const { isSidebarOpen, toggleSidebar } = useToggleSidebar();
 const { isMobile } = useDeviceDetection();
 
