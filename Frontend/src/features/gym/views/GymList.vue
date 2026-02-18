@@ -9,7 +9,7 @@
   </section>
 </template>
 <script lang="ts" setup>
-import { useSeoMeta } from "@unhead/vue";
+import { useHead, useSeoMeta } from "@unhead/vue";
 import { storeToRefs } from "pinia";
 import { computed } from "vue";
 import GymCard from "../components/GymCard.vue";
@@ -25,7 +25,7 @@ const title = computed(
 
 const description = computed(
   () =>
-    `Browse gyms located in ${selectedBarangay.value}, Puerto Princesa City.`,
+    `Find fitness centers, boxing gyms, and sports facilities in ${selectedBarangay.value}, Puerto Princesa, Palawan. View locations on our interactive map.`,
 );
 
 useSeoMeta({
@@ -33,5 +33,22 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
+  ogType: "website",
+  ogImage: "https://puertoprincesagyms.vercel.app/og-banner.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: "Puerto Princesa Gyms - Interactive Gym Map & Directory",
+});
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: computed(
+        () =>
+          `https://puertoprincesagyms.vercel.app/barangay/${selectedBarangay.value}`,
+      ),
+    },
+  ],
 });
 </script>
