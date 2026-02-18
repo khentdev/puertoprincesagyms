@@ -12,6 +12,7 @@
     "@cloudinary/url-gen": "^1.22.0",
     "@cloudinary/vue": "^1.13.3",
     "@tailwindcss/vite": "^4.1.18",
+    "@unhead/vue": "^3.0.0-beta.6",
     "@vueuse/components": "^14.2.1",
     "@vueuse/core": "^14.2.1",
     "lucide-vue-next": "^0.563.0",
