@@ -1,12 +1,12 @@
 <template>
   <header
-    class="h-18 flex bg-bg-panel items-center border-b border-border-subtle px-4 md:px-2"
+    class="h-18 flex bg-bg-panel items-center border-b border-border-subtle px-5"
   >
     <div class="flex items-center gap-2">
       <img
-        src="../../../../assets/images/logos/BrandLogo.png"
+        src="../../../../assets/images/logos/ppcgymslogo.png"
         alt="Puerto Princesa Gym Directory Logo"
-        class="size-12 sm:size-16 md:size-20 object-contain"
+        class="size-12 object-contain rounded-full" 
       />
       <div class="flex flex-col items-start justify-center">
         <h1 class="text-base sm:text-lg font-medium text-text-high-contrast">
