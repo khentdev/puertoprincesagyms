@@ -33,7 +33,6 @@ This project centralizes gym information into one clean, easy-to-use directory o
 ### Future Enhancements (Post MVP)
 
 - Search gyms by name
-- Filter gyms by barangay
 - View contact information and social links
 - View opening hours
 - Detailed gym descriptions

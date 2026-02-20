@@ -3,12 +3,7 @@ import featureRoutes from "../../features";
 
 
 const routes: RouteRecordRaw[] = [
-    ...featureRoutes,
-    {
-        path: "/:pathMatch(.*)*",
-        name: "page-not-found",
-        component: () => import("../../views/NotFoundView.vue")
-    }
+    ...featureRoutes
 ]
 
 const router = createRouter({
