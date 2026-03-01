@@ -267,6 +267,24 @@
         "https://res.cloudinary.com/duasfk8fg/image/upload/v1771142944/3_itkawg.jpg"
       ],
       "map_link": "https://maps.app.goo.gl/GzNB8AjW6WdXEmHN8"
+    },
+    {
+      "id": "16",
+      "name": "Palawan Jiu Jitsu BJJ",
+      "barangay": "Sicsican",
+      "address": "Seven Dragons Gym Husky Cafe Sicsican, Puerto Princesa, Philippines",
+      "location": {
+        "lat": 9.7988609,
+        "lng": 118.7125788
+      },
+      "profile_image": "https://res.cloudinary.com/duasfk8fg/image/upload/v1772360436/profile_fyopmz.jpg",
+      "images": [
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1772360443/2_avynjl.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1772360445/4_ijbfyy.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1772360445/3_eouega.jpg",
+        "https://res.cloudinary.com/duasfk8fg/image/upload/v1772360442/1_njklio.jpg"
+      ],
+      "map_link": "https://maps.app.goo.gl/q9m6bfotAKkXtCne9"
     }
   ]
 }
