@@ -1,13 +1,13 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
+import { createMemoryHistory, createRouter, createWebHistory, type RouteRecordRaw } from "vue-router";
 import featureRoutes from "../../features";
 
 
-const routes: RouteRecordRaw[] = [
+export const routes: RouteRecordRaw[] = [
     ...featureRoutes
 ]
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(import.meta.env.BASE_URL),
     routes,
 })
 export default router
