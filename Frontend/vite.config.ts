@@ -18,7 +18,8 @@ export default ({
     Sitemap({
       hostname: 'https://puertoprincesagyms.vercel.app',
       dynamicRoutes: getDynamicRoutes(),
-      robots: [{ userAgent: '*', allow: '/' }]
+      changefreq: "weekly",
+      priority: 0.8
     }),
   ],
   ssgOptions: {
