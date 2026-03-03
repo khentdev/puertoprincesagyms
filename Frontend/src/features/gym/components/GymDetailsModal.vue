@@ -155,7 +155,7 @@
                           v-if="hours.time === 'Always Open'"
                           class="flex items-center gap-2"
                         >
-                          <ClockCheck class="size-5 shrink-0" />
+                          <ClockCheck class="size-5 shrink-0 text-text-high-contrast" />
                           <p class="text-text-low-contrast">Always Open</p>
                         </li>
                         <li
