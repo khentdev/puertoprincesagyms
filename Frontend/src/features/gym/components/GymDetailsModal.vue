@@ -21,7 +21,7 @@
             class="absolute top-4 right-4 z-20 p-2 bg-component-bg/80 hover:bg-component-bg-hover backdrop-blur-sm text-text-high-contrast rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-border-focus shadow-sm border border-border-subtle cursor-pointer"
             aria-label="Close modal"
           >
-            <X class="w-5 h-5" />
+            <X class="size-5" />
           </button>
 
           <div class="p-4 md:p-6 space-y-6">
@@ -130,6 +130,102 @@
               </div>
             </div>
 
+            <template v-if="selectedGym.opening_hours">
+              <div class="space-y-4">
+                <h1 class="text-lg font-semibold text-text-high-contrast">
+                  Opening Hours
+                </h1>
+
+                <div class="flex flex-col items-start justify-start gap-2">
+                  <template
+                    v-for="(hours, index) in selectedGym.opening_hours"
+                    :key="index"
+                  >
+                    <div class="flex flex-col items-center">
+                      <ul
+                        class="flex items-center justify-between gap-2 w-full"
+                      >
+                        <li
+                          class="font-semibold w-32 text-text-high-contrast"
+                          v-if="hours.day"
+                        >
+                          {{ hours.day }}
+                        </li>
+                        <li
+                          v-if="hours.time === 'Always Open'"
+                          class="flex items-center gap-2"
+                        >
+                          <ClockCheck class="size-5 shrink-0" />
+                          <p class="text-text-low-contrast">Always Open</p>
+                        </li>
+                        <li
+                          v-else-if="hours.time === 'Closed'"
+                          class="text-text-low-contrast"
+                        >
+                          Closed
+                        </li>
+                        <li v-else class="text-text-low-contrast">
+                          {{ hours.time }} - {{ hours.close }}
+                        </li>
+                      </ul>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </template>
+            <template v-if="selectedGym.contact_info">
+              <div class="space-y-4">
+                <h1 class="text-lg font-semibold text-text-high-contrast">
+                  Contact
+                </h1>
+                <div class="flex flex-col items-start justify-start gap-2">
+                  <div
+                    v-if="selectedGym.contact_info.phone"
+                    class="flex items-center gap-2 text-text-high-contrast"
+                  >
+                    <Phone class="size-5 shrink-0" />
+                    <p class="text-text-low-contrast">
+                      {{ selectedGym.contact_info.phone }}
+                    </p>
+                  </div>
+                  <div
+                    v-if="selectedGym.contact_info.email"
+                    class="flex items-center gap-2 text-text-high-contrast"
+                  >
+                    <Mail class="size-5 shrink-0" />
+                    <p class="text-text-low-contrast">
+                      {{ selectedGym.contact_info.email }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </template>
+
+            <template v-if="selectedGym.social_links">
+              <div class="space-y-4">
+                <h1 class="text-lg font-semibold text-text-high-contrast">
+                  {{ socialLinkLabelPrefix }}
+                </h1>
+                <div class="flex">
+                  <ul class="flex items-center gap-2">
+                    <li
+                      v-for="(link, index) in selectedGym.social_links"
+                      :key="index"
+                      class="text-text-low-contrast hover:text-text-high-contrast px-2 border border-border-subtle py-1 rounded-lg bg-component-bg cursor-pointer"
+                    >
+                      <a
+                        :href="link.link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="capitalize"
+                      >
+                        {{ link.name }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </template>
             <div
               class="p-2 sticky bottom-0 bg-bg-panel backdrop-blur-sm -mx-4 md:-mx-6 px-4 pb-2 border-t border-transparent"
             >
@@ -139,7 +235,7 @@
                 rel="noopener noreferrer"
                 class="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-solid-bg hover:bg-solid-bg-hover text-solid-text font-semibold transition-all shadow-md hover:shadow-lg active:scale-[0.98] ring-1 ring-white/10"
               >
-                <MapPin class="w-5 h-5" />
+                <MapPin class="size-5" />
                 <span>Open in Google Maps</span>
               </a>
             </div>
@@ -157,7 +253,7 @@
 </template>
 
 <script lang="ts" setup>
-import { MapPin, X } from "lucide-vue-next";
+import { Mail, MapPin, Phone, X, ClockCheck } from "lucide-vue-next";
 import { storeToRefs } from "pinia";
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import { getBarangayMapOptions } from "../config/barangayMapConfig";
@@ -168,6 +264,10 @@ import ImageViewerModal from "./ImageViewerModal.vue";
 const gymStore = useGymStore();
 const { closeSelectedGym } = gymStore;
 const { selectedGym } = storeToRefs(gymStore);
+
+const socialLinkLabelPrefix = computed(() =>
+  selectedGym.value?.social_links?.length === 1 ? "Social" : "Socials",
+);
 
 const MAX_CACHE_SIZE = 50;
 const mapUrlCache = new Map<string, string>();
