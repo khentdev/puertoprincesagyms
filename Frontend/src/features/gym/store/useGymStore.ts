@@ -2,10 +2,10 @@ import { useStorage } from "@vueuse/core";
 import { defineStore } from "pinia";
 import { computed, readonly, ref } from "vue";
 import gymsJson from "../data/gyms.json";
-import type { Barangays, Gym, SortOption } from "../types";
+import type { Barangays, GymV2, SortOption } from "../types";
 
 export const useGymStore = defineStore("gymStore", () => {
-    const gyms = ref<Gym[]>(gymsJson.gyms as Gym[])
+    const gyms = ref<GymV2[]>(gymsJson.gyms as GymV2[])
 
     const selectedBarangay = useStorage<Barangays>("selectedBarangay", "All Locations")
     const setSelectedBarangay = (barangay: Barangays) => {
@@ -18,7 +18,7 @@ export const useGymStore = defineStore("gymStore", () => {
     const allGymCount = computed(() => gyms.value.length);
 
     const MAX_CACHE_SIZE = 50
-    const sortedCache = new Map<string, Gym[]>()
+    const sortedCache = new Map<string, GymV2[]>()
     const filteredGyms = computed(() => {
         const cacheKey = `${selectedBarangay.value}-${selectedSort.value.key}-${selectedSort.value.order}`
         if (sortedCache.has(cacheKey))
@@ -42,7 +42,7 @@ export const useGymStore = defineStore("gymStore", () => {
         return sortedGyms
     })
 
-    const selectedGym = ref<Gym | null>(null)
+    const selectedGym = ref<GymV2 | null>(null)
     const setSelectedGym = ({ id }: { id: string }) => {
         selectedGym.value = gyms.value.find((gym) => gym.id === id) || null
     }

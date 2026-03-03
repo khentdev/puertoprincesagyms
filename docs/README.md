@@ -1,5 +1,3 @@
-# Puerto Princesa Gym Directories
-
 # Goal
 
 ### **Why am I making this project?**
@@ -59,6 +57,8 @@ interface Gym {
 	name: string
 	barangay: string
 	address: string
+	location:{
+	}
 	map_link: string
 	image_url: string
 }
@@ -67,16 +67,21 @@ interface Gym {
 ### V2 Data Fields (Post MVP)
 
 ```tsx
-interface GymV2 extends Gym {
-	gym_description: string
-	opening_hours: {
-  day: string
-  open: string
-  close: string
-}[]
-	social_links: string
-	contact_info: string
-
+export interface GymV2 extends Gym {
+    gym_description?: string
+    opening_hours: {
+        day: string
+        time: string
+        close: string
+    }[]
+    social_links: {
+        name?: string,
+        link?: string
+    }[],
+    contact_info: {
+        phone?: string,
+        email?: string
+    }
 }
 ```
 

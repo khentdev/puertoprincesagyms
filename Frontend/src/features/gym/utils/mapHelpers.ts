@@ -1,5 +1,5 @@
 import { MAPS_CONFIG } from "../../../config/maps"
-import type { Gym } from "../types"
+import type { GymV2 } from "../types"
 
 export interface StaticMapOptions {
     width?: number
@@ -11,7 +11,7 @@ export interface StaticMapOptions {
 }
 
 export function generateStaticMapUrl(
-    gym: Gym,
+    gym: GymV2,
     options: StaticMapOptions = {}
 ): string {
     const {
