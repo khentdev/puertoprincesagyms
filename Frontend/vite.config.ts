@@ -16,7 +16,7 @@ export default ({
     vue(),
     tailwindcss(),
     Sitemap({
-      hostname: 'https://puertoprincesagyms.vercel.app',
+      hostname: 'https://puertoprincesagyms.vercel.app/',
       dynamicRoutes: getDynamicRoutes(),
       changefreq: "weekly",
       priority: 0.8
