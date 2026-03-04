@@ -5,8 +5,8 @@
       "destination": "/sitemaps/sitemap.xml"
     },
     {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
+      "source": "/sitemaps/robots.txt",
+      "destination": "/sitemaps/robots.txt"
     },
     {
       "source": "/(.*)",
