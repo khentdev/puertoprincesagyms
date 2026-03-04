@@ -19,7 +19,7 @@ export default ({
       hostname: 'https://puertoprincesagyms.vercel.app/',
       dynamicRoutes: getDynamicRoutes(),
       changefreq: "weekly",
-      priority: 0.8
+      priority: 0.8,
     }),
   ],
   ssgOptions: {

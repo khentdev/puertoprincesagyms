@@ -16,7 +16,7 @@
     },
     {
       "source": "/robots.txt",
-      "destination": "/robots.txt"
+      "destination": "robots.txt"
     },
     {
       "source": "/(.*)",
