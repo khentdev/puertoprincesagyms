@@ -9,5 +9,10 @@
       "headers": [{ "key": "Content-Type", "value": "text/plain" }]
     }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/((?!sitemap\\.xml|robots\\.txt|assets/|og-banner\\.jpg).*)",
+      "destination": "/index.html"
+    }
+  ]
 }
