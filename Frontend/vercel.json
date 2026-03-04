@@ -9,10 +9,8 @@
       "headers": [{ "key": "Content-Type", "value": "text/plain" }]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/((?!sitemap\\.xml|robots\\.txt|assets/|og-banner\\.jpg).*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
