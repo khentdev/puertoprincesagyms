@@ -9,8 +9,5 @@
       "headers": [{ "key": "Content-Type", "value": "text/plain" }]
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
