@@ -11,8 +11,8 @@
   ],
   "rewrites": [
     {
-      "source": "/sitemaps/sitemap.xml",
-      "destination": "/sitemaps/sitemap.xml"
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
     },
     {
       "source": "/robots.txt",
